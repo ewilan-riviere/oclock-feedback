@@ -1,10 +1,10 @@
 # Fetch en JavaScript
 
-Dans le web, les sites communiquent beaucoup avec d'autres sites web ou des serveurs. Généralement ces données sont sous forme de JSON pour des API\* modernes ou de XML pour des API plus anciennes, mais elles peuvent prendre des formes bien différentes selon les cas.
+Dans le web, les sites communiquent beaucoup avec d'autres sites web ou des serveurs. Généralement ces données sont sous forme de JSON pour des API[^1] modernes ou de XML pour des API plus anciennes, mais elles peuvent prendre des formes bien différentes selon les cas.
 
 En JavaScript, il existe une fonctionnalité moderne qui permet de récupérer des données depuis une URL : `fetch()`. C'est une méthode native du navigateur, c'est-à-dire qu'elle est disponible dans tous les navigateurs récents.
 
-Pendant longtemps, on a utilisé la fonction `XMLHttpRequest()` pour récupérer des données depuis une URL. Mais son implémentation est assez complexe et lourde alors que `fetch()` est beaucoup plus simple à utiliser et est disponible depuis ECMAScript\* 2015, aussi appelé ES6. En bref, c'est historique et l'apparition de `fetch()` a permis de simplifier les choses.
+Pendant longtemps, on a utilisé la fonction `XMLHttpRequest()` pour récupérer des données depuis une URL. Mais son implémentation est assez complexe et lourde alors que `fetch()` est beaucoup plus simple à utiliser et est disponible depuis ECMAScript[^2] 2015, aussi appelé ES6. En bref, c'est historique et l'apparition de `fetch()` a permis de simplifier les choses.
 
 La documentation MDN de `fetch()` est disponible [ici](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) sur tu souhaites en savoir plus. La suite ici, traitera de l'utilisation de `fetch()`.
 
@@ -137,6 +137,5 @@ Dans des projets plus complexes, tu pourras retrouver une librairie comme [axios
 
 ---
 
-API : _Application Programming Interface_, sous ce nom un peu sibyllin se cache une interface qui permet de récupérer des données depuis un serveur. C'est un peu comme une base de données, mais qui est accessible depuis n'importe quel site web. C'est très pratique pour récupérer des données sans avoir à les stocker sur son propre serveur. On parle alors d'API web, mais le terme _API_ désigne aussi la manière dont on communique avec n'importe quelle application. Par exemple, utiliser jQuery c'est communiquer avec l'API de jQuery pour réaliser différentes actions, et ce n'est pas une API web.
-
-ECMAScript : également abrégé en ES, c'est une spécification de langage de programmation qui définit les fonctionnalités, la syntaxe et les conventions pour le langage JavaScript. En d'autres termes, ECMAScript est la norme sur laquelle le langage JavaScript est basé. JavaScript est le nom couramment utilisé pour désigner le langage de programmation basé sur ECMAScript.
+[^1]: API ou _Application Programming Interface_, sous ce nom un peu sibyllin se cache une interface qui permet de récupérer des données depuis un serveur. C'est un peu comme une base de données, mais qui est accessible depuis n'importe quel site web. C'est très pratique pour récupérer des données sans avoir à les stocker sur son propre serveur. On parle alors d'API web, mais le terme _API_ désigne aussi la manière dont on communique avec n'importe quelle application. Par exemple, utiliser jQuery c'est communiquer avec l'API de jQuery pour réaliser différentes actions, et ce n'est pas une API web.
+[^2]: ECMAScript, également abrégé en ES, c'est une spécification de langage de programmation qui définit les fonctionnalités, la syntaxe et les conventions pour le langage JavaScript. En d'autres termes, ECMAScript est la norme sur laquelle le langage JavaScript est basé. JavaScript est le nom couramment utilisé pour désigner le langage de programmation basé sur ECMAScript.
