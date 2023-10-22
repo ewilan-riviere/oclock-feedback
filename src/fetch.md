@@ -6,6 +6,8 @@ En JavaScript, il existe une fonctionnalité moderne qui permet de récupérer d
 
 Pendant longtemps, on a utilisé la fonction `XMLHttpRequest()` pour récupérer des données depuis une URL. Mais son implémentation est assez complexe et lourde alors que `fetch()` est beaucoup plus simple à utiliser et est disponible depuis ECMAScript\* 2015, aussi appelé ES6. En bref, c'est historique et l'apparition de `fetch()` a permis de simplifier les choses.
 
+La documentation MDN de `fetch()` est disponible [ici](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) sur tu souhaites en savoir plus. La suite ici, traitera de l'utilisation de `fetch()`.
+
 ## Exemples
 
 ### XMLHttpRequest (ancienne méthode)
