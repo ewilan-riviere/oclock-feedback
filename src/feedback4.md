@@ -48,6 +48,8 @@ class MainController extends CoreController
 
 Essaye tout d'abord d'afficher cela dans ton navigateur et après tu pourras passer à la suite, le listing des profs et des étudiants. Le `CoreController.php` de la correction peut t'aider mais veille à ne prendre que les méthodes dont tu as besoin pour l'instant.
 
+Si tu préfères qu'on le fasse ensemble au début, je suis disponible. Regarde bien la correction et si tu es perdu·e, on peut explorer ensemble ton code pour voir ce qui ne va pas.
+
 Une fois que tu auras un retour sur ton navigateur avec un listing des profs et des étudiants, essaye de mettre en place l'ajout puis la modification, mais seulement après avoir réussi à afficher les données. C'est une bonne base pour la suite, reprends chaque fichier et ne garde que ce qui est nécessaire pour l'instant. Sinon tu auras trop d'informations à gérer et tu risques de t'y perdre.
 
 Bon courage !

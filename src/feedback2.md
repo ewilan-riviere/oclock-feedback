@@ -87,9 +87,9 @@ Tu as sans doute remarqué que la méthode `save()` n'existe pas encore dans le 
 
 > Une méthode `public` peut être appelée depuis l'extérieur, une méthode `protected` ne peut pas être appelée depuis l'extérieur, elle est donc accessible uniquement depuis l'intérieur de la classe ou depuis les classes enfants. Et une méthode `private` ne peut être appelée que depuis l'intérieur de la classe.
 
-Maintenant, le plus simple dans un premier temps va être de gérer uniquement l'insertion avec une méthode `public`, directement dans le Model `Teacher.php`.
+Tout ceci te semble peut-être un peu complexe pour l'instant. Le plus simple dans un premier temps va être de gérer uniquement l'insertion avec une méthode `public`, directement dans le Model `Teacher.php`.
 
-> C'est moins sécurisé mais plus simple pour l'instant.
+> C'est moins sécurisé, mais plus simple pour l'instant.
 
 Je te conseille de t'inspirer de la correction et de créer la méthode `insert()` dans le Model `Teacher.php` :
 
@@ -130,7 +130,7 @@ public function insert()
 }
 ```
 
-Tu peux maintenant ajouter un prof en base de données depuis ton controller !
+Tu peux maintenant ajouter un prof en base de données depuis ton controller ! N'hésite pas à me demander si tu as des questions.
 
 ## La suite
 

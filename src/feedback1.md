@@ -14,13 +14,13 @@ Tu as bien mis en place les routes d'édition pour les profs et les étudiants, 
 <form action="<?= $router->generate('teacher_update_post') ?>" method="POST" class="mt-5">
 ```
 
-La route générée ici est `/teacher` et non `/teacher/{id}`. C'est parce que tu n'as pas passé l'id du professeur dans la route. Il faut donc que tu passes l'id du professeur dans la route. Tu peux le faire en passant l'id dans l'URL :
+La route générée ici est `/teacher` et non `/teacher/{id}`. C'est parce que tu n'as pas passé l'id du professeur dans la route. Il faut donc que tu l'ajoutes en paramètre :
 
 ```php
 <form action="<?= $router->generate('teacher_update_post', ['teacherid' => $teacher->getId()]) ?>" method="POST" class="mt-5">
 ```
 
-Pour vérifier la route qui est générée la meilleure solution est de l'afficher sur la page concernée, tu peux ajouter ceci dans le fichier `teacher_update.tpl.php` (temporairement) :
+Pour vérifier la route qui est générée, la meilleure solution est de l'afficher sur la page concernée, tu peux ajouter ceci dans le fichier `teacher_update.tpl.php` (temporairement) :
 
 ```php
 <?= $router->generate('teacher_update_post', ['teacherid' => $teacher->getId()]) ?>

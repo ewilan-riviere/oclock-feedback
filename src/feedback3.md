@@ -34,7 +34,7 @@ $router->map(
 );
 ```
 
-Mais ton message d'erreur permet bien de retour à l'accueil dans tous les cas, ce qui est bien.
+Mais ton message d'erreur permet bien de retour à l'accueil dans tous les cas, ce qui est bien (il faudra adapter le lien après cette modification).
 
 ## Views
 
@@ -156,7 +156,7 @@ Oui, je veux supprimer
 
 ## Aller plus loin
 
-Tu peux t'inspirer de la correction pour mettre en place l'ajout d'un étudiant, puis la modification d'un prof ou d'un étudiant.
+Tu peux t'inspirer de la correction pour mettre en place l'ajout d'un étudiant, puis la modification d'un prof ou d'un étudiant. Je suis disponible si tu as des questions !
 
 > Le model `Student` n'a actuellement pas la relation `teacher_id` avec le model `Teacher`, tu peux t'inspirer de la correction pour l'ajouter.
 
