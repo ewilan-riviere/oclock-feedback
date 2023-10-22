@@ -125,6 +125,10 @@ Avec Node.js, la méthode `fetch()` n'était pas disponible jusqu'à récemment,
 
 Mais depuis Node.js v18, `fetch()` est disponible nativement, il n'est donc plus nécessaire d'utiliser une librairie externe. Néanmoins, dans des projets plus anciens, il est possible de retrouver `node-fetch` ou `axios`. Et dans certains projets, pour des questions de rétrocompatibilité ou d'options plus avancées, il est possible de retrouver ces libraries.
 
+Il faut noter que le même problème pour `await` est présent avec Node.js, on ne peut pas l'utiliser à la racine du code. Cependant, le plus souvent on a un fichier, généralement appelé `index.js` où le serveur se lance sans utiliser `await`, et on utilise ensuite `await` dans les autres fichiers.
+
+Dans les frameworks modernes comme React, Vue.js, Angular ou Svelte, on utilise `await` à la racine du code, car le code est compilé avant d'être exécuté.
+
 ## En savoir plus
 
 ### Voir ses requêtes HTTP
