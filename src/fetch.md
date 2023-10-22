@@ -135,6 +135,41 @@ Dans les navigateurs modernes, il est possible de voir les requêtes HTTP qui so
 
 Dans des projets plus complexes, tu pourras retrouver une librairie comme [axios](https://github.com/axios/axios) qui permet de faire des requêtes HTTP plus facilement. Tu peux faire la même chose avec `fetch()`, `axios` permet simplement d'ajouter des fonctionnalités supplémentaires et c'est historiquement une librairie très utilisée. Il faut ajouter que `axios` est disponible dans Node.js et dans les navigateurs, ce qui n'est le cas de `fetch()` que depuis Node.js v18.
 
+### Synchrone et asynchrone
+
+Les fonctions asynchrones ne bloquent donc pas l'exécution du code, comme dans cet exemple :
+
+```js
+let items = [];
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => response.json())
+  .then((data) => {
+    items = data;
+    console.log(items);
+  });
+
+console.log("Je suis exécuté avant la fin de la requête HTTP");
+console.log(items); // Sera vide
+```
+
+Dans cet exemple, la requête HTTP est asynchrone, c'est pour cela que la variable `items` est vide, car la requête n'est pas encore terminée. Elle se termine dans le second `.then()`.
+
+Mais il est possible de contrôler l'asynchronicité avec `async` et `await`. Dans l'exemple suivant, la requête HTTP est toujours asynchrone, mais le code est exécuté de manière synchrone, car `await` permet d'attendre que la requête soit terminée avant de continuer l'exécution du code.
+
+```js
+let items = [];
+async function getData() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await response.json();
+  console.log("Je suis exécuté après la fin de la requête HTTP");
+  items = data;
+  console.log(items);
+}
+getData();
+```
+
+Ici, la requête HTTP est toujours asynchrone, mais le code est exécuté de manière synchrone, car `await` permet d'attendre que la requête soit terminée avant de continuer l'exécution du code.
+
 ---
 
 [^1]: API ou _Application Programming Interface_, sous ce nom un peu sibyllin se cache une interface qui permet de récupérer des données depuis un serveur. C'est un peu comme une base de données, mais qui est accessible depuis n'importe quel site web. C'est très pratique pour récupérer des données sans avoir à les stocker sur son propre serveur. On parle alors d'API web, mais le terme _API_ désigne aussi la manière dont on communique avec n'importe quelle application. Par exemple, utiliser jQuery c'est communiquer avec l'API de jQuery pour réaliser différentes actions, et ce n'est pas une API web.
